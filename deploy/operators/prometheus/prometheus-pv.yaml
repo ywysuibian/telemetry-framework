@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  labels:
+    type: local
+  name: sa-telemetry-prometheus-volume
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 20Gi
+  hostPath:
+    path: /mnt/prometheus
+  storageClassName: manual

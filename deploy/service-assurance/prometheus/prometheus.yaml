@@ -37,6 +37,9 @@ spec:
   serviceMonitorSelector:
     matchLabels:
       smartgateway: white
+  additionalScrapeConfigs:
+    name: prometheus-white-additional
+    key: prometheus-additional.yaml
   storage:
     class: ""
     resources: {}
@@ -46,3 +49,5 @@ spec:
         resources:
           requests:
             storage: 20G
+        storageClassName: manual
+  version: v2.3.2

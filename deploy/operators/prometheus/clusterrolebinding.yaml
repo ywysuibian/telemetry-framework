@@ -2,10 +2,10 @@ apiVersion: authorization.openshift.io/v1
 groupNames: null
 kind: ClusterRoleBinding
 metadata:
-  name: prometheus-operator
+  name: prometheus-operator-telemetry
   uid: 15c20379-50e4-11e9-b068-566fc8c20003
 roleRef:
-  name: prometheus-operator
+  name: prometheus-operator-telemetry
 subjects:
 - kind: ServiceAccount
   name: prometheus-operator

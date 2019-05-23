@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  creationTimestamp: null
+  name: openstack-exporter-rules
+  labels:
+      prometheus: prometheus-sa-telemetry
+      role: prometheus-rulefiles
+spec:
+  groups:
+  - interval: 30s
+    name: Openstack-Agent-Health
+    rules:
+    - alert: os-agent-down
+      expr: ({__name__ =~ "openstack_.*_agent_state"}) == 0
+      annotations:
+        description: 'Service {{ $labels.service }} on {{ $labels.hostname }} down for more than 30s'
+        summary:   '{{ $__name__ }}-{{ $labels.hostname }}-{{ $labels.service }} down'
+        for: 30s
+      labels:
+        severity: critical

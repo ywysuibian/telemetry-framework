@@ -12,5 +12,5 @@ spec:
     protocol: TCP
     targetPort: web
   selector:
-    sa-app: alertmanager
+    app: alertmanager
   sessionAffinity: None
