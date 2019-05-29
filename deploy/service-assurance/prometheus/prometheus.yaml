@@ -15,7 +15,7 @@ spec:
     alertmanagers:
     - name: alertmanager
       namespace: sa-telemetry
-      port: metrics
+      port: web
   nodeSelector:
     application: sa-telemetry
     node: white
