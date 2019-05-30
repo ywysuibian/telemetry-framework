@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: grafana-dashboard-definitions-1
 data:
-  ipmi.json: |-
+  "ipmi.json": |
    {
      "__inputs": [
        {
@@ -670,7 +670,7 @@ data:
      "uid": "0kFYnFmZk",
      "version": 20
    }
-  openstack.yml: |-
+  "openstack.json": |
    {
      "__inputs": [
        {
@@ -2624,7 +2624,7 @@ data:
      "uid": "YZCsB1Qmz",
      "version": 23
    }
-  openstack-v2.yml: |-
+  "openstack-v2.json": |
    {
      "__inputs": [
        {

@@ -1176,7 +1176,7 @@ data:
             "rgba(237, 129, 40, 0.89)",
             "#d44a3a"
           ],
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "format": "dtdurations",
           "gauge": {
             "maxValue": null,
@@ -1597,7 +1597,7 @@ data:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "fill": 0,
           "gridPos": {
             "h": 8,
@@ -2038,7 +2038,7 @@ data:
           {
             "allValue": null,
             "current": {},
-            "datasource": "${DS_PROMETHEUS}",
+            "datasource": "prometheus",
             "hide": 0,
             "includeAll": false,
             "label": "Cloud Nodes",
@@ -2181,7 +2181,7 @@ data:
             "mode": "spectrum"
           },
           "dataFormat": "timeseries",
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "gridPos": {
             "h": 6,
             "w": 12,
@@ -2240,7 +2240,7 @@ data:
             "mode": "spectrum"
           },
           "dataFormat": "timeseries",
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "gridPos": {
             "h": 6,
             "w": 12,
@@ -2291,7 +2291,7 @@ data:
           "bars": true,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "fill": 1,
           "gridPos": {
             "h": 6,
@@ -2375,7 +2375,7 @@ data:
           "bars": true,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "description": "The three disks on cloud machines with the lowest free percentage",
           "fill": 1,
           "gridPos": {
@@ -2461,7 +2461,7 @@ data:
           "bars": true,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "fill": 1,
           "gridPos": {
             "h": 6,
@@ -2542,7 +2542,7 @@ data:
         },
         {
           "columns": [],
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "fontSize": "100%",
           "gridPos": {
             "h": 12,
