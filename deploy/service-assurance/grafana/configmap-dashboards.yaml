@@ -15,3 +15,11 @@ data:
       editable: true
       options:
         path: /grafana-dashboard-definitions/0
+    - name: '1'
+      orgId: 1
+      folder: ''
+      type: file
+      disableDeletion: false
+      editable: true
+      options:
+        path: /grafana-dashboard-definitions/1
