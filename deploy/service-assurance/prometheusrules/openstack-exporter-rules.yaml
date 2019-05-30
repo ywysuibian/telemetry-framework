@@ -15,7 +15,7 @@ spec:
       expr: ({__name__ =~ "openstack_.*_agent_state"}) == 0
       annotations:
         description: 'Service {{ $labels.service }} on {{ $labels.hostname }} down for more than 30s'
-        summary:   '{{ $__name__ }}-{{ $labels.hostname }}-{{ $labels.service }} down'
+        summary:   '{{ $labels.__name__ }}-{{ $labels.hostname }}-{{ $labels.service }} down'
         for: 30s
       labels:
         severity: critical
