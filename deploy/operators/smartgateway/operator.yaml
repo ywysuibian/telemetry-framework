@@ -15,7 +15,7 @@ spec:
       serviceAccountName: smart-gateway-operator
       containers:
         - name: smart-gateway-operator
-          image: smart-gateway-operator
+          image: docker-registry.default.svc:5000/sa-telemetry/smart-gateway-operator:latest
           imagePullPolicy: "Always"
           env:
             - name: WATCH_NAMESPACE
