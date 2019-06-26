@@ -6,7 +6,7 @@ metadata:
   name: white
   namespace: sa-telemetry
 spec:
-  version: v2.11.104
+  # version: v2.11.104
   alerting:
     alert_relabel_configs:
     - regex: (.+)\d+
@@ -14,11 +14,11 @@ spec:
       target_label: dc
     alertmanagers:
     - name: alertmanager
-      namespace: sa-telemetry
+      namespace: openshift-monitoring
       port: web
-  nodeSelector:
-    application: sa-telemetry
-    node: white
+  # nodeSelector:
+  #   application: sa-telemetry
+  #   node: white
   podAntiAffinity: hard
   podMetadata:
     labels:
@@ -40,14 +40,14 @@ spec:
   additionalScrapeConfigs:
     name: prometheus-white-additional
     key: prometheus-additional.yaml
-  storage:
-    class: ""
-    resources: {}
-    selector: {}
-    volumeClaimTemplate:
-      spec:
-        resources:
-          requests:
-            storage: 20G
-        storageClassName: manual
-  version: v2.3.2
+  # storage:
+  #   class: ""
+  #   resources: {}
+  #   selector: {}
+  #   volumeClaimTemplate:
+  #     spec:
+  #       resources:
+  #         requests:
+  #           storage: 20G
+  #       storageClassName: manual
+  version: v3.11
