@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: alertmanager
 spec:
-  host: alertmanager.apps.dev7.nfvpe.site
+  host: alertmanager-sa-telemetry.router.default.svc.cluster.local
   to:
     kind: Service
     name: alertmanager

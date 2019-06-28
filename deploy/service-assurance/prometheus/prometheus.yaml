@@ -14,7 +14,7 @@ spec:
       target_label: dc
     alertmanagers:
     - name: alertmanager
-      namespace: openshift-monitoring
+      namespace: sa-telemetry
       port: web
   # nodeSelector:
   #   application: sa-telemetry
@@ -31,6 +31,8 @@ spec:
     matchLabels:
       prometheus: prometheus-sa-telemetry
       role: prometheus-rulefiles
+  secrets:
+  - alertmanager-token
   securityContext:
     nonroot: true
   serviceAccountName: prometheus-sa
@@ -38,8 +40,11 @@ spec:
     matchLabels:
       smartgateway: white
   additionalScrapeConfigs:
-    name: prometheus-white-additional
-    key: prometheus-additional.yaml
+    name: prometheus-white-additionalscrapeconfigs
+    key: prometheus-additionalScrapeConfigs.yaml
+  additionalAlertManagerConfigs:
+    name: prometheus-white-additionalalertmanagerconfigs
+    key: prometheus-additionalAlertManagerConfigs.yaml
   # storage:
   #   class: ""
   #   resources: {}
@@ -50,4 +55,4 @@ spec:
   #         requests:
   #           storage: 20G
   #       storageClassName: manual
-  version: v3.11
+  version: v2.3.2

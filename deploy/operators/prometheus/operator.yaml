@@ -29,11 +29,11 @@ spec:
       containers:
       - args:
         - --kubelet-service=kube-system/kubelet
-        - --config-reloader-image=registry.access.redhat.com/openshift3/ose-configmap-reloader:v3.11
-        - --alertmanager-default-base-image=registry.access.redhat.com/openshift3/prometheus-alertmanager:v3.11
-        - --prometheus-config-reloader=registry.access.redhat.com/openshift3/ose-prometheus-config-reloader:v3.11
-        - --prometheus-default-base-image=registry.access.redhat.com/openshift3/prometheus
-        image: registry.access.redhat.com/openshift3/ose-prometheus-operator:v3.11
+        - --config-reloader-image=quay.io/coreos/configmap-reload:v0.0.1
+        # - --alertmanager-default-base-image=registry.access.redhat.com/openshift3/prometheus-alertmanager:v3.11
+        # - --prometheus-config-reloader=quay.io/coreos/prometheus-config-reloader
+        # - --prometheus-default-base-image=registry.access.redhat.com/openshift3/prometheus
+        image: quay.io/coreos/prometheus-operator:v0.31.1
         imagePullPolicy: IfNotPresent
         name: prometheus-operator
         ports:
