@@ -6837,7 +6837,7 @@ data:
           "fill": 1,
           "gridPos": {
             "h": 6,
-            "w": 12,
+            "w": 8,
             "x": 0,
             "y": 6
           },
@@ -6865,11 +6865,11 @@ data:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "max by(cpu,exported_instance)(topk(3,max_over_time(sa_collectd_cpu_percent[5m])))",
+              "expr": "label_replace(max by(cpu,exported_instance)(topk(3,max_over_time(sa_collectd_cpu_percent[5m]))), \"exported_instance_x\", \"$1\", \"exported_instance\", \"mycloud-(.*).cdlj2c.com\")",
               "format": "time_series",
               "instant": true,
               "intervalFactor": 1,
-              "legendFormat": "{{exported_instance}}",
+              "legendFormat": "{{exported_instance_x}}",
               "refId": "A"
             }
           ],
@@ -6921,9 +6921,9 @@ data:
           "description": "The three disks on cloud machines with the lowest free percentage",
           "fill": 1,
           "gridPos": {
-            "h": 9,
-            "w": 12,
-            "x": 12,
+            "h": 6,
+            "w": 8,
+            "x": 16,
             "y": 6
           },
           "id": 12,
@@ -6951,12 +6951,12 @@ data:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "bottomk(3, sa_collectd_df_percent_bytes{df=~\"[vs]da.*|mapper.*\",type=\"free\"})",
+              "expr": "label_replace(bottomk(3, sa_collectd_df_percent_bytes{df=~\"[vs]da.*|mapper.*\",type=\"free\"}), \"exported_instance_x\", \"$1\", \"exported_instance\", \"mycloud-(.*).cdlj2c.com.sda3\")",
               "format": "time_series",
               "hide": false,
               "instant": true,
               "intervalFactor": 1,
-              "legendFormat": "{{exported_instance}}.{{df}}",
+              "legendFormat": "{{exported_instance_x}}",
               "refId": "A"
             }
           ],
@@ -7007,9 +7007,9 @@ data:
           "fill": 1,
           "gridPos": {
             "h": 6,
-            "w": 12,
-            "x": 0,
-            "y": 12
+            "w": 8,
+            "x": 8,
+            "y": 6
           },
           "id": 10,
           "legend": {
@@ -7035,11 +7035,11 @@ data:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "max by(memory,exported_instance)(topk(3,max_over_time(sa_collectd_memory_percent{memory=\"used\"}[5m])))",
+              "expr": "label_replace(max by(memory,exported_instance)(topk(3,max_over_time(sa_collectd_memory_percent{memory=\"used\"}[5m]))), \"exported_instance_x\", \"$1\", \"exported_instance\", \"mycloud-(.*).cdlj2c.com\")",
               "format": "time_series",
               "instant": true,
               "intervalFactor": 1,
-              "legendFormat": "{{exported_instance}}",
+              "legendFormat": "{{exported_instance_x}}",
               "refId": "A"
             }
           ],
@@ -7088,9 +7088,9 @@ data:
           "fontSize": "100%",
           "gridPos": {
             "h": 12,
-            "w": 12,
-            "x": 12,
-            "y": 15
+            "w": 24,
+            "x": 0,
+            "y": 12
           },
           "id": 4,
           "links": [],
