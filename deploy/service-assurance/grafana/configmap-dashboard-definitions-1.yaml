@@ -6865,11 +6865,11 @@ data:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "label_replace(max by(cpu,exported_instance)(topk(3,max_over_time(sa_collectd_cpu_percent[5m]))), \"exported_instance_x\", \"$1\", \"exported_instance\", \"mycloud-(.*).cdlj2c.com\")",
+              "expr": "label_replace(max by(exported_instance)(topk(3,avg(sum(sa_collectd_cpu_percent{type=~\"system|user\"}) by (exported_instance, cpu)) by (exported_instance))), \"exported_instance_x\", \"$1\", \"exported_instance\", \"mycloud-(.*).cdlj2c.com\")",
               "format": "time_series",
               "instant": true,
               "intervalFactor": 1,
-              "legendFormat": "{{exported_instance_x}}",
+              "legendFormat": "{{exported_instance_x}}.{{cpu}}.{{type}}",
               "refId": "A"
             }
           ],
@@ -6951,12 +6951,12 @@ data:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "label_replace(bottomk(3, sa_collectd_df_percent_bytes{df=~\"[vs]da.*|mapper.*\",type=\"free\"}), \"exported_instance_x\", \"$1\", \"exported_instance\", \"mycloud-(.*).cdlj2c.com.sda3\")",
+              "expr": "label_replace(bottomk(3, sa_collectd_df_percent_bytes{df=~\"[vs]da.*|mapper.*\",type=\"free\"}), \"exported_instance_x\", \"$1\", \"exported_instance\", \"mycloud-(.*).cdlj2c.com\")",
               "format": "time_series",
               "hide": false,
               "instant": true,
               "intervalFactor": 1,
-              "legendFormat": "{{exported_instance_x}}",
+              "legendFormat": "{{exported_instance_x}}.{{df}}",
               "refId": "A"
             }
           ],
