@@ -6745,8 +6745,8 @@ data:
               "refId": "A"
             }
           ],
-          "timeFrom": "6h",
-          "title": "CPU Highest Activity (6 hours)",
+          "timeFrom": "3h",
+          "title": "CPU Highest Activity (3 hours)",
           "tooltip": {
             "show": true,
             "showHistogram": false
@@ -6869,7 +6869,7 @@ data:
               "format": "time_series",
               "instant": true,
               "intervalFactor": 1,
-              "legendFormat": "{{exported_instance_x}}.{{cpu}}.{{type}}",
+              "legendFormat": "{{exported_instance_x}}",
               "refId": "A"
             }
           ],
