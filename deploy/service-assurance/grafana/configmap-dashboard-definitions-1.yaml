@@ -6745,8 +6745,8 @@ data:
               "refId": "A"
             }
           ],
-          "timeFrom": "3h",
-          "title": "CPU Highest Activity (3 hours)",
+          "timeFrom": "1h",
+          "title": "CPU Highest Activity",
           "tooltip": {
             "show": true,
             "showHistogram": false
@@ -6804,8 +6804,8 @@ data:
               "refId": "A"
             }
           ],
-          "timeFrom": "24h",
-          "title": "Memory Highest Activity (24 hours)",
+          "timeFrom": "6h",
+          "title": "Memory Highest Activity",
           "tooltip": {
             "show": true,
             "showHistogram": false
