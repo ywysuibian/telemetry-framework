@@ -30,6 +30,7 @@ spec:
       - args:
         - --kubelet-service=kube-system/kubelet
         - --config-reloader-image=quay.io/coreos/configmap-reload:v0.0.1
+        - --namespaces=sa-telemetry #accepts comma-separated list of namespaces as a string
         # - --alertmanager-default-base-image=registry.access.redhat.com/openshift3/prometheus-alertmanager:v3.11
         # - --prometheus-config-reloader=quay.io/coreos/prometheus-config-reloader
         # - --prometheus-default-base-image=registry.access.redhat.com/openshift3/prometheus
