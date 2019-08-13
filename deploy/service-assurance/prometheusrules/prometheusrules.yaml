@@ -30,14 +30,14 @@ spec:
   - name: General Alerts
     interval: 1m
     rules:
-    - alert: TestAlert
-      expr: vector(1)
-      for: 10m
-      labels:
-        severity: info
-      annotations:
-        summary: Just for test
-        description: This is a fake alert for test prometheus/alertmanager connections 
+    # - alert: TestAlert
+    #   expr: vector(1)
+    #   for: 10m
+    #   labels:
+    #     severity: info
+    #   annotations:
+    #     summary: Just for test
+    #     description: This is a fake alert for test prometheus/alertmanager connections 
     - alert: HighErrorRate
       expr: job:request_latency_seconds:mean5m{job=~"sa-telemetry/metrics-consumer-.*"} > 0.5
       for: 10m
