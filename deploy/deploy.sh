@@ -27,7 +27,7 @@ echo "-- We are going to $method the telemetry framework"
 # declare the list of objects we're going to build out
 declare -a operator_list=(
     'operators/prometheus/service_account.yaml'
-    # 'operators/prometheus/clusterrole.yaml'
+    'operators/prometheus/clusterrole.yaml'
     'operators/prometheus/clusterrolebinding.yaml'
     'operators/prometheus/operator.yaml'
     # 'operators/qdrouterd/crds/interconnectedcloud_v1alpha1_qdr_crd.yaml'

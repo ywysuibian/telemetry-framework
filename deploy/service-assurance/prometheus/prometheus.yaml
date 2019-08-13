@@ -56,3 +56,7 @@ spec:
   #           storage: 20G
   #       storageClassName: manual
   version: v2.3.2
+  remoteRead:
+    - url: "http://prom-persist-metrics-poddomain.persist-metrics.svc.cluster.local:8086/api/v1/prom/read?db=prometheus"
+  remoteWrite:
+    - url: "http://prom-persist-metrics-relay.persist-metrics.svc.cluster.local:9096/api/v1/prom/write?db=prometheus"
