@@ -16,3 +16,12 @@ data:
          timeInterval: "1s"
       version: 1
       editable: true
+    - name: influxdb
+      type: influxDB
+      access: proxy
+      orgId: 1
+      url: http://pm-poddomain.persist-metrics.svc.cluster.local:8086
+      jsonData:
+         timeInterval: "1s"
+      version: 1
+      editable: true

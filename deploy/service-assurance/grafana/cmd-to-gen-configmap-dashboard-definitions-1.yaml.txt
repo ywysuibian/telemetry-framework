@@ -1,0 +1,2 @@
+cd telemetry-framework
+ls deploy/service-assurance/grafana/grafana-dashboard-* | awk -F '/' -v ORS=' ' 'BEGIN{print "kubectl create configmap grafana-dashboard-definitions-1 -n sa-telemetry"}{print "--from-file \""$NF"\"="$0}END{print "-o yaml --dry-run | kubectl replace -f -"}' | awk '{system($0)}'
