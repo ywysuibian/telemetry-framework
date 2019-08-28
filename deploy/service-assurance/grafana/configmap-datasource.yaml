@@ -24,6 +24,5 @@ data:
       database: prometheus
       jsonData:
          timeInterval: "1s"
-         database: prometheus
       version: 1
       editable: true
