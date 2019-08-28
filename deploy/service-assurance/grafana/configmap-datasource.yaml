@@ -21,7 +21,9 @@ data:
       access: proxy
       orgId: 1
       url: http://pm-poddomain.persist-metrics.svc.cluster.local:8086
+      database: prometheus
       jsonData:
          timeInterval: "1s"
+         database: prometheus
       version: 1
       editable: true
