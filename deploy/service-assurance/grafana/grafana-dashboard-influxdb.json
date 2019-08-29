@@ -181,5 +181,6 @@
     "timezone": "",
     "title": "influx",
     "uid": "TTxjXKKWz",
+    "refresh": "10s",
     "version": 4
   }
