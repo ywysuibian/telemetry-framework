@@ -16,12 +16,12 @@ spec:
       containers:
         - name: qdr-operator
           # Replace this with the built image name
-          image: quay.io/interconnectedcloud/qdrouterd-operator:1.0.0-beta2
+          image: quay.io/interconnectedcloud/qdr-operator:1.0.0-beta2
           ports:
           - containerPort: 60000
             name: metrics
           command:
-          - qdrouterd-operator
+          - qdr-operator
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
