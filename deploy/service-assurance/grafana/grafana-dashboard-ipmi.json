@@ -1,43 +1,8 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_PROMETHEUS",
-      "label": "prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.0.3"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": "5.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "table",
-      "name": "Table",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
+        "$$hashKey": "object:83",
         "builtIn": 1,
         "datasource": "-- Grafana --",
         "enable": true,
@@ -51,13 +16,12 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1559143282393,
+  "iteration": 1567135067598,
   "links": [],
   "panels": [
     {
       "columns": [],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fontSize": "100%",
       "gridPos": {
         "h": 9,
@@ -116,6 +80,7 @@
       ],
       "targets": [
         {
+          "$$hashKey": "object:191",
           "expr": "ipmi_sensor_state>0",
           "format": "table",
           "instant": true,
@@ -129,7 +94,7 @@
     },
     {
       "columns": [],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fontSize": "100%",
       "gridPos": {
         "h": 9,
@@ -188,6 +153,7 @@
       ],
       "targets": [
         {
+          "$$hashKey": "object:451",
           "expr": "ipmi_temperature_celsius",
           "format": "table",
           "instant": true,
@@ -204,7 +170,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fill": 0,
       "gridPos": {
         "h": 9,
@@ -236,6 +202,7 @@
       "steppedLine": true,
       "targets": [
         {
+          "$$hashKey": "object:610",
           "expr": "ipmi_power_watts{ipmi_instance=~\"$ipmi_instance\"}",
           "format": "time_series",
           "instant": false,
@@ -286,7 +253,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fill": 0,
       "gridPos": {
         "h": 9,
@@ -318,6 +285,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:720",
           "expr": "ipmi_voltage_volts{ipmi_instance=~\"$ipmi_instance\"}",
           "format": "time_series",
           "intervalFactor": 1,
@@ -366,7 +334,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fill": 0,
       "gridPos": {
         "h": 9,
@@ -398,6 +366,7 @@
       "steppedLine": true,
       "targets": [
         {
+          "$$hashKey": "object:845",
           "expr": "ipmi_temperature_celsius{ipmi_instance=~\"$ipmi_instance\"}",
           "format": "time_series",
           "intervalFactor": 1,
@@ -446,7 +415,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fill": 0,
       "gridPos": {
         "h": 9,
@@ -478,6 +447,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:934",
           "expr": "ipmi_fan_speed_rpm{ipmi_instance=~\"$ipmi_instance\"}",
           "format": "time_series",
           "intervalFactor": 1,
@@ -526,7 +496,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fill": 1,
       "gridPos": {
         "h": 6,
@@ -558,6 +528,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:1059",
           "expr": "ipmi_scrape_duration_seconds",
           "format": "time_series",
           "intervalFactor": 1,
@@ -610,8 +581,13 @@
     "list": [
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS_PROMETHEUS}",
+        "current": {
+          "text": "All",
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": "prometheus",
         "hide": 0,
         "includeAll": true,
         "label": "Instance",
@@ -662,5 +638,5 @@
   "timezone": "",
   "title": "IPMI",
   "uid": "0kFYnFmZk",
-  "version": 20
+  "version": 6
 }
