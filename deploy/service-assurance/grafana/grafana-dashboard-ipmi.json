@@ -21,7 +21,7 @@
   "panels": [
     {
       "columns": [],
-      "datasource": "prometheus",
+      "datasource": "$promsource",
       "fontSize": "100%",
       "gridPos": {
         "h": 9,
@@ -94,7 +94,7 @@
     },
     {
       "columns": [],
-      "datasource": "prometheus",
+      "datasource": "$promsource",
       "fontSize": "100%",
       "gridPos": {
         "h": 9,
@@ -170,7 +170,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "prometheus",
+      "datasource": "$promsource",
       "fill": 0,
       "gridPos": {
         "h": 9,
@@ -253,7 +253,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "prometheus",
+      "datasource": "$promsource",
       "fill": 0,
       "gridPos": {
         "h": 9,
@@ -334,7 +334,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "prometheus",
+      "datasource": "$promsource",
       "fill": 0,
       "gridPos": {
         "h": 9,
@@ -415,7 +415,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "prometheus",
+      "datasource": "$promsource",
       "fill": 0,
       "gridPos": {
         "h": 9,
@@ -496,7 +496,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "prometheus",
+      "datasource": "$promsource",
       "fill": 1,
       "gridPos": {
         "h": 6,
@@ -580,6 +580,20 @@
   "templating": {
     "list": [
       {
+        "current": {
+          "text": "prometheus",
+          "value": "prometheus"
+        },
+        "hide": 0,
+        "label": "DataSource",
+        "name": "promsource",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "regex": "",
+        "type": "datasource"
+      },
+      {
         "allValue": null,
         "current": {
           "text": "All",
@@ -587,7 +601,7 @@
             "$__all"
           ]
         },
-        "datasource": "prometheus",
+        "datasource": "$promsource",
         "hide": 0,
         "includeAll": true,
         "label": "Instance",

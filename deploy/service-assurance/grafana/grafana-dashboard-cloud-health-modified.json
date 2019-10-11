@@ -30,7 +30,7 @@
           "mode": "spectrum"
         },
         "dataFormat": "timeseries",
-        "datasource": "prometheus",
+        "datasource": "$promsource",
         "gridPos": {
           "h": 6,
           "w": 12,
@@ -89,7 +89,7 @@
           "mode": "spectrum"
         },
         "dataFormat": "timeseries",
-        "datasource": "prometheus",
+        "datasource": "$promsource",
         "gridPos": {
           "h": 6,
           "w": 12,
@@ -140,7 +140,7 @@
         "bars": true,
         "dashLength": 10,
         "dashes": false,
-        "datasource": "prometheus",
+        "datasource": "$promsource",
         "fill": 1,
         "gridPos": {
           "h": 6,
@@ -224,7 +224,7 @@
         "bars": true,
         "dashLength": 10,
         "dashes": false,
-        "datasource": "prometheus",
+        "datasource": "$promsource",
         "fill": 1,
         "gridPos": {
           "h": 6,
@@ -308,7 +308,7 @@
         "bars": true,
         "dashLength": 10,
         "dashes": false,
-        "datasource": "prometheus",
+        "datasource": "$promsource",
         "description": "The three disks on cloud machines with the lowest free percentage",
         "fill": 1,
         "gridPos": {
@@ -391,7 +391,7 @@
       },
       {
         "columns": [],
-        "datasource": "prometheus",
+        "datasource": "$promsource",
         "fontSize": "100%",
         "gridPos": {
           "h": 12,
@@ -450,7 +450,22 @@
     "style": "dark",
     "tags": [],
     "templating": {
-      "list": []
+      "list": [
+        {
+          "current": {
+            "text": "prometheus",
+            "value": "prometheus"
+          },
+          "hide": 0,
+          "label": "DataSource",
+          "name": "promsource",
+          "options": [],
+          "query": "prometheus",
+          "refresh": 1,
+          "regex": "",
+          "type": "datasource"
+        }
+      ]
     },
     "time": {
       "from": "now-5m",
